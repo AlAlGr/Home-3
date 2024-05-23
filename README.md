@@ -1,4 +1,5 @@
 # Чтение содержимого всех файлов
+
 files = []
 file_names = ["1.txt", "2.txt"]
 
@@ -8,9 +9,11 @@ for file_name in file_names:
         files.append((file_name, content))
 
 # Сортировка файлов по количеству строк
+
 files.sort(key=lambda x: len(x[1]))
 
 # Запись отсортированного содержимого в новый файл
+
 output_file_name = "output.txt"
 with open(output_file_name, "w") as output_file:
     for file_name, content in files:
